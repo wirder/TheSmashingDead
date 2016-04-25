@@ -10,4 +10,6 @@ public:
 private:
 	Sprite background;
 	RenderWindow &target;
+	Text newGame;
+	Text quitGame;
 };

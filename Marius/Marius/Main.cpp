@@ -17,7 +17,9 @@ int main()
 		eManager.manageEvent();
 		shape.move(eManager.getVector());
 		
-
+		/* window.clear();
+		window.draw(shape);
+		window.display(); */
 	}
 
 	return 0;
