@@ -8,11 +8,11 @@ Menu::Menu(RenderWindow &refWindow) : target(refWindow)
 {
 	background = Sprite();
 	selectionPosition = 0;
-	Image backgroundImage;
+	Image backgroundImage = Image();
 	if (!backgroundImage.loadFromFile("res/bgmenu.tga"))
 		DebugOut("Background Image loading fail...");
 	else {
-		Font font;
+		font = Font();
 		Color color(206, 206, 206);
 		if (!font.loadFromFile("res/Dead Kansas.ttf"))
 			DebugOut("Font loading fail...");
@@ -21,6 +21,7 @@ Menu::Menu(RenderWindow &refWindow) : target(refWindow)
 			DebugOut("Font loading ok...");
 
 			// NEW GAME
+			newGame = Text();
 			newGame.setFont(font);
 			newGame.setString("Nouvelle partie");
 			newGame.setCharacterSize(50);
@@ -28,6 +29,7 @@ Menu::Menu(RenderWindow &refWindow) : target(refWindow)
 			newGame.setPosition(150, 600);
 
 			// QUIT
+			quitGame = Text();
 			quitGame.setFont(font);
 			quitGame.setString("Quitter");
 			quitGame.setCharacterSize(50);
@@ -36,17 +38,17 @@ Menu::Menu(RenderWindow &refWindow) : target(refWindow)
 
 			//Selection
 			Color bgColor(129, 91, 54);
-			selection = RectangleShape(sf::Vector2f(300, 60));
-			selection.setFillColor(bgColor);
+			selection = new RectangleShape(sf::Vector2f(300, 60));
+			selection->setFillColor(bgColor);
 			setSelectionSize(0);
-			selection.setOutlineThickness(5);
-			selection.setOutlineColor(sf::Color(250, 150, 100));
+			selection->setOutlineThickness(5);
+			selection->setOutlineColor(sf::Color(250, 150, 100));
 
 
 		}
-		Texture texture;
-		texture.loadFromImage(backgroundImage);
-		background.setTexture(texture);
+		txBackground = Texture();
+		txBackground.loadFromImage(backgroundImage);
+		background.setTexture(txBackground);
 		Draw();
 	}
 
@@ -55,25 +57,24 @@ Menu::Menu(RenderWindow &refWindow) : target(refWindow)
 
 void Menu::Update()
 {
-
 }
 
 void Menu::Draw()
 {
 	target.draw(background);
-	target.draw(selection);
+	target.draw(*selection);
 	target.draw(newGame);
 	target.draw(quitGame);
 }
 
 void Menu::setSelectionSize(int choice) {
 	if (choice == 0) {
-		selection.setSize(sf::Vector2f(445, 75));
-		selection.setPosition(140, 595);
+		selection->setSize(sf::Vector2f(445, 75));
+		selection->setPosition(140, 595);
 	}
 	else {
-		selection.setSize(sf::Vector2f(210, 75));
-		selection.setPosition(840, 595);
+		selection->setSize(sf::Vector2f(210, 75));
+		selection->setPosition(840, 595);
 	}
 }
 

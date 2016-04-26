@@ -58,6 +58,10 @@ void EventManager::keyboardEvent()
 		if (event.key.code == Keyboard::LShift)
 			keyShift = false;
 	}
+
+	if (game.isMenu()) {
+		game.getMenu().moveSelection(getVector());
+	}
 }
 
 Vector2f EventManager::getVector() {

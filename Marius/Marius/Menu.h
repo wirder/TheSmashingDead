@@ -14,6 +14,8 @@ private:
 	RenderWindow &target;
 	Text newGame;
 	Text quitGame;
-	RectangleShape selection;
+	Font font;
+	Texture txBackground;
+	RectangleShape *selection;
 	int selectionPosition;
 };
