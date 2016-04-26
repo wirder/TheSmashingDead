@@ -1,14 +1,14 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
+#include "Game.h"
 class EventManager {
 public:
-	EventManager(sf::RenderWindow &window);
+	EventManager(Game game);
 	void manageEvent();
 	sf::Event event;
 	sf::Vector2f getVector();
 private:
-	sf::RenderWindow &window;
+	Game game;
 	void keyboardEvent();
 	bool keyUp;
 	bool keyDown;

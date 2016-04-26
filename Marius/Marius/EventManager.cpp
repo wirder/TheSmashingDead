@@ -1,10 +1,11 @@
 #include "EventManager.h"
 #include "Debug.h"
+#include "Game.h"
 
 using namespace std;
 using namespace sf;
 
-EventManager::EventManager(RenderWindow &refWindow) : window(refWindow)
+EventManager::EventManager(Game refWindow) : game(refWindow)
 {
 keyUp = false;
 keyDown = false;
@@ -15,11 +16,11 @@ keyShift = false;
 
 void EventManager::manageEvent()
 {
-	while (window.pollEvent(event)) {
+	while (game.getWindow().pollEvent(event)) {
 		switch (event.type)
 		{
 		case Event::Closed:
-			window.close();
+			game.getWindow().close();
 			break;
 		case Event::KeyPressed:
 		case Event::KeyReleased:
