@@ -7,9 +7,13 @@ public:
 	Menu(RenderWindow &mainWindow);
 	void Update();
 	void Draw();
+	void setSelectionSize(int choice);
+	void moveSelection(Vector2f vector);
 private:
 	Sprite background;
 	RenderWindow &target;
 	Text newGame;
 	Text quitGame;
+	RectangleShape selection;
+	int selectionPosition;
 };
