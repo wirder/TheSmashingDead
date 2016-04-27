@@ -35,3 +35,10 @@ void Enemy::setState(bool state) {
 bool Enemy::getState() {
 	return this->state;
 }
+void Enemy::Update()
+{
+}
+
+void Enemy::Draw()
+{
+}

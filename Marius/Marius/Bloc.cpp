@@ -23,3 +23,11 @@ void Bloc::setState(bool state) {
 bool Bloc::getState() {
 	return this->state;
 }
+
+void Bloc::Update()
+{
+}
+
+void Bloc::Draw()
+{
+}
