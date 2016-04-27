@@ -85,3 +85,9 @@ void Menu::moveSelection(Vector2f vector) {
 		selectionPosition = 0;
 	setSelectionSize(selectionPosition);
 }
+
+void Menu::validateSelection() {
+	if (selectionPosition == 1) {
+		target.close();
+	}
+}

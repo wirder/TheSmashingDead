@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Bloc.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="Bloc.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EventManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Menu.h" />
