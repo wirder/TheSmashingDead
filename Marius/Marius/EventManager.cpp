@@ -12,6 +12,7 @@ keyDown = false;
 keyLeft = false;
 keyRight = false;
 keyShift = false;
+keyEnter = false;
 }
 
 void EventManager::manageEvent()
@@ -45,6 +46,8 @@ void EventManager::keyboardEvent()
 			keyRight = true;
 		if (event.key.code == Keyboard::LShift)
 			keyShift = true;
+		if (event.key.code == Keyboard::Return)
+			keyEnter = true;
 	}
 	else {
 		if ((event.key.code == Keyboard::Z) || (event.key.code == Keyboard::Up))
@@ -57,10 +60,15 @@ void EventManager::keyboardEvent()
 			keyRight = false;
 		if (event.key.code == Keyboard::LShift)
 			keyShift = false;
+		if (event.key.code == Keyboard::Return)
+			keyEnter = false;
 	}
 
-	if (game.isMenu()) {
-		game.getMenu().moveSelection(getVector());
+	if (game.isMenu()){
+		if(keyEnter == false)
+			game.getMenu().moveSelection(getVector());
+		else 
+			game.getMenu().validateSelection();
 	}
 }
 

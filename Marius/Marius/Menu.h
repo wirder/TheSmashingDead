@@ -9,6 +9,7 @@ public:
 	void Draw();
 	void setSelectionSize(int choice);
 	void moveSelection(Vector2f vector);
+	void validateSelection();
 private:
 	Sprite background;
 	RenderWindow &target;

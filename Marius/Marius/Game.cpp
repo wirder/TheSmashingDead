@@ -24,7 +24,6 @@ void Game::draw()
 	if (isInMenu) {
 		menu.Draw();
 	}
-
 }
 
 bool Game::isMenu()
