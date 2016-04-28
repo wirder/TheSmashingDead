@@ -1,2 +1,3 @@
-﻿  Game.cpp
+﻿  EntityManager.cpp
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\entitymanager.cpp(15): warning C4715: 'EntityManager::create' : les chemins de contrôle ne retournent pas tous une valeur
   Marius.vcxproj -> D:\Projets\Etna\TheSmashingDead\TheSmashingDead\Marius\x64\Debug\Marius.exe
