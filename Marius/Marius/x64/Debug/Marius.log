@@ -1,3 +1,146 @@
-﻿  EntityManager.cpp
+﻿  Window.cpp
+  TileMap.cpp
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(3): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(3): error C2504: 'Drawable' : classe de base non définie
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(4): error C2504: 'Transformable' : classe de base non définie
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(7): error C2039: 'string' : n'est pas membre de 'std'
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\predefined c++ types (compiler internal)(211): note: voir la déclaration de 'std'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(7): error C2143: erreur de syntaxe : absence de ',' avant '&'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(49): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(49): error C2061: erreur de syntaxe : identificateur 'RenderTarget'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(61): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(61): error C3646: 'm_vertices' : spécificateur de substitution inconnu
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(61): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(62): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(62): error C3646: 'm_tileset' : spécificateur de substitution inconnu
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(62): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(10): error C2065: 'm_tileset' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(10): error C2228: la partie gauche de '.loadFromFile' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(10): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(10): error C2065: 'tileset' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(14): error C2065: 'm_vertices' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(14): error C2228: la partie gauche de '.setPrimitiveType' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(14): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(14): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(14): error C2065: 'Quads' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(15): error C2065: 'm_vertices' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(15): error C2228: la partie gauche de '.resize' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(15): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(15): error C2065: 'width' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(15): error C2065: 'height' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(18): error C2065: 'width' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(19): error C2065: 'height' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(22): error C2065: 'tiles' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(22): error C2065: 'width' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(25): error C2065: 'm_tileset' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(25): error C2228: la partie gauche de '.getSize' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(25): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(25): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(25): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(26): error C2065: 'm_tileset' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(26): error C2228: la partie gauche de '.getSize' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(26): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(26): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(26): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(29): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(29): error C2065: 'Vertex' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(29): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(29): error C2065: 'm_vertices' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(29): error C2065: 'width' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C2228: la partie gauche de '.position' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(32): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C2228: la partie gauche de '.position' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(33): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C2228: la partie gauche de '.position' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(34): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C2228: la partie gauche de '.position' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(35): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C2228: la partie gauche de '.texCoords' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(38): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C2228: la partie gauche de '.texCoords' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(39): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C2228: la partie gauche de '.texCoords' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(40): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C2065: 'quad' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C2228: la partie gauche de '.texCoords' doit avoir un class/struct/union
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C2653: 'sf' : n'est pas un nom de classe ni d'espace de noms
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C2065: 'tileSize' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C2228: la partie gauche de '.x' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C2228: la partie gauche de '.y' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(41): error C3861: 'Vector2f' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(52): error C2065: 'states' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(52): error C2228: la partie gauche de '.transform' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(52): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(52): error C3861: 'getTransform' : identificateur introuvable
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(55): error C2065: 'states' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(55): error C2228: la partie gauche de '.texture' doit avoir un class/struct/union
+  d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(55): note: le type est 'unknown-type'
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(55): error C2065: 'm_tileset' : identificateur non déclaré
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\tilemap.cpp(55): fatal error C1003: le nombre d'erreurs est supérieur à 100 ; arrêt de la compilation
+  RessourceManager.cpp
+  Player.cpp
+  Menu.cpp
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\debug.h(34): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\debug.h(36): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  Main.cpp
+  Game.cpp
+  EventManager.cpp
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\debug.h(34): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\debug.h(36): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  EntityManager.cpp
+  Enemy.cpp
+  Bloc.cpp
+  Génération de code en cours...
 d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\entitymanager.cpp(15): warning C4715: 'EntityManager::create' : les chemins de contrôle ne retournent pas tous une valeur
-  Marius.vcxproj -> D:\Projets\Etna\TheSmashingDead\TheSmashingDead\Marius\x64\Debug\Marius.exe

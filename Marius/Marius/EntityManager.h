@@ -7,6 +7,6 @@ using namespace std;
 
 class EntityManager {
 public:
-	AbstractEntity *create (std::string type);
+	AbstractEntity *create(std::string type);
 };
 
