@@ -5,7 +5,7 @@
 using namespace std;
 using namespace sf;
 
-EventManager::EventManager(Game refWindow) : game(refWindow)
+EventManager::EventManager()
 {
 keyUp = false;
 keyDown = false;
@@ -17,11 +17,12 @@ keyEnter = false;
 
 void EventManager::manageEvent()
 {
-	while (game.getWindow().pollEvent(event)) {
+	Game *game = Game::getInstance();
+	while (game->getWindow()->pollEvent(event)) {
 		switch (event.type)
 		{
 		case Event::Closed:
-			game.getWindow().close();
+			game->getWindow()->close();
 			break;
 		case Event::KeyPressed:
 		case Event::KeyReleased:
@@ -35,6 +36,7 @@ void EventManager::manageEvent()
 
 void EventManager::keyboardEvent()
 {
+	Game *game = Game::getInstance();
 	if (event.type == Event::KeyPressed) {
 		if ((event.key.code == Keyboard::Z) || (event.key.code == Keyboard::Up))
 			keyUp = true;
@@ -64,11 +66,11 @@ void EventManager::keyboardEvent()
 			keyEnter = false;
 	}
 
-	if (game.isMenu()){
+	if (game->isMenu()){
 		if(keyEnter == false)
-			game.getMenu().moveSelection(getVector());
+			game->getMenu()->moveSelection(getVector());
 		else 
-			game.getMenu().validateSelection();
+			game->getMenu()->validateSelection();
 	}
 }
 

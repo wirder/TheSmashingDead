@@ -4,7 +4,7 @@
 
 using namespace sf;
 
-Menu::Menu(RenderWindow &refWindow) : target(refWindow)
+Menu::Menu()
 {
 	background = Sprite();
 	selectionPosition = 0;
@@ -61,10 +61,11 @@ void Menu::Update()
 
 void Menu::Draw()
 {
-	target.draw(background);
-	target.draw(*selection);
-	target.draw(newGame);
-	target.draw(quitGame);
+	Game* game = Game::getInstance();
+	game->getWindow()->draw(background);
+	game->getWindow()->draw(*selection);
+	game->getWindow()->draw(newGame);
+	game->getWindow()->draw(quitGame);
 }
 
 void Menu::setSelectionSize(int choice) {
@@ -87,7 +88,11 @@ void Menu::moveSelection(Vector2f vector) {
 }
 
 void Menu::validateSelection() {
+	Game* game = Game::getInstance();
 	if (selectionPosition == 1) {
-		target.close();
+		game->getWindow()->close();
+	}
+	else {
+		game->leaveMenu();
 	}
 }

@@ -3,12 +3,11 @@
 #include "Game.h"
 class EventManager {
 public:
-	EventManager(Game game);
+	EventManager();
 	void manageEvent();
 	sf::Event event;
 	sf::Vector2f getVector();
 private:
-	Game game;
 	void keyboardEvent();
 	bool keyUp;
 	bool keyDown;

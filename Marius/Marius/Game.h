@@ -6,14 +6,18 @@ using namespace sf;
 using namespace std;
 
 class Game {
+private:
+	Game();
+	static Game* game;
+	RenderWindow* window;
+	bool isInMenu;
+	Menu* menu;
 public:
-	Game(RenderWindow & mainWindow, Menu & mainMenu);
-	RenderWindow &getWindow();
-	Menu &getMenu();
+	static Game* getInstance();
+	RenderWindow* getWindow();
+	Menu* getMenu();
 	void draw();
 	bool isMenu();
-private:
-	RenderWindow &window;
-	bool isInMenu;
-	Menu menu;
+	void leaveMenu();
+	static int instance;
 };

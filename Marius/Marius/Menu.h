@@ -4,7 +4,7 @@
 using namespace sf;
 class Menu : AbstractEntity {
 public:
-	Menu(RenderWindow &mainWindow);
+	Menu();
 	void Update();
 	void Draw();
 	void setSelectionSize(int choice);
@@ -12,7 +12,6 @@ public:
 	void validateSelection();
 private:
 	Sprite background;
-	RenderWindow &target;
 	Text newGame;
 	Text quitGame;
 	Font font;
