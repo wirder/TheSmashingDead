@@ -11,6 +11,8 @@ public:
 	void setPosY(float posY);
 	bool getState();
 	void setState(bool state);
+	void Update();
+	void Draw();
 private:
 	float posX;
 	float posY;

@@ -45,3 +45,10 @@ void Player::setNumLive(int numLive) {
 int Player::getNumLive() {
 	return this->numLive;
 }
+void Player::Update()
+{
+}
+
+void Player::Draw()
+{
+}

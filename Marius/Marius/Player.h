@@ -15,6 +15,8 @@ public:
 	float getPosY();
 	void setNumLive(int numLive);
 	int getNumLive();
+	void Update();
+	void Draw();
 private:
 	float posX;
 	float posY;
