@@ -11,7 +11,7 @@
 			2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
 			0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
 		};
-		TileMap::load("tileset.png", sf::Vector2u(32, 32), level, 16, 8);
+		TileMap::load("res/tileset.png", sf::Vector2u(32, 32), level, 16, 8);
 	}
 
 
