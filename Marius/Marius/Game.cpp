@@ -1,6 +1,8 @@
 #pragma once
 #include "Game.h"
 #include "Menu.h"
+#include "TileMap.h"
+
 int Game::instance = 0;
 
 Game::Game()
@@ -34,13 +36,14 @@ Menu* Game::getMenu()
 
 void Game::draw()
 {
+	TileMap map;
 	window->clear();
 	if (isInMenu)
 		menu->Draw();
 	else {
 		CircleShape shape(50);
 		shape.setFillColor(sf::Color(100, 250, 50));
-		window->draw(shape);
+		window->draw(map);
 	}
 	window->display();
 }
