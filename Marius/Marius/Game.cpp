@@ -1,23 +1,24 @@
 #pragma once
 #include "Game.h"
 #include "Menu.h"
-
-int Game::instance;
+int Game::instance = 0;
 
 Game::Game()
 {
-	isInMenu = true;
-	window = new RenderWindow(sf::VideoMode(1280, 720), "The Smashing Dead");
-	window->setFramerateLimit(60);
-	window->setVerticalSyncEnabled(true);
-	menu = new Menu();
-	Game::instance += 1;
+		Game::instance = Game::instance + 1;
+		isInMenu = true;
+		window = new RenderWindow(sf::VideoMode(1280, 720), "The Smashing Dead");
+		window->setFramerateLimit(60);
+		window->setVerticalSyncEnabled(true);
+		menu = new Menu();
+
 }
 
 Game* Game::getInstance()
 {
-	if (instance < 1)
+	if (Game::instance < 1) {
 		game = new Game();
+	}
 	return game;
 }
 

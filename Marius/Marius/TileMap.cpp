@@ -1,5 +1,5 @@
 #include "TileMap.h"
-
+#include <SFML\Graphics.hpp>
 class TileMap : public sf::Drawable, public sf::Transformable
 {
 public:
