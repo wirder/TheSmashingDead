@@ -49,7 +49,6 @@ Menu::Menu()
 		txBackground = Texture();
 		txBackground.loadFromImage(backgroundImage);
 		background.setTexture(txBackground);
-		Draw();
 	}
 
 
