@@ -9,7 +9,7 @@ Game::Game()
 {
 		Game::instance = Game::instance + 1;
 		isInMenu = true;
-		window = new RenderWindow(sf::VideoMode(1280, 720), "The Smashing Dead");
+		window = new RenderWindow(sf::VideoMode(1280, 768), "The Smashing Dead");
 		window->setFramerateLimit(60);
 		window->setVerticalSyncEnabled(true);
 		menu = new Menu();
