@@ -1,7 +1,9 @@
 #include "AbstractEntity.h"
+#include <SFML/Graphics.hpp>
 
 #ifndef PLAYER_H
 #define PLAYER_H
+using namespace sf;
 
 class Player : public AbstractEntity {
 public:
@@ -17,6 +19,7 @@ public:
 	int getNumLive();
 	void Update();
 	void Draw();
+	Player();
 private:
 	float posX;
 	float posY;

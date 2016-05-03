@@ -1,5 +1,22 @@
 #include "Player.h"
+#include "Debug.h"
+#include <cstdlib>
+#include <iostream>
+Player::Player() {
+	Texture playerImage = Texture();
+	Sprite playerSprite = Sprite();
 
+	if (!playerImage.loadFromFile("res/sprites/hero/walk.png"))
+	{
+		DebugOut("Erreur pendant le chargement du joueur");
+	}
+	else
+	{
+		playerSprite.setTexture(playerImage);
+		playerSprite.setOrigin(20, 34);
+		playerSprite.setScale(0.5, 0.5);
+	}
+}
 void Player::goLeft(float posX) {
 	this->posX = posX--;
 }

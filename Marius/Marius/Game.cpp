@@ -1,7 +1,7 @@
 #pragma once
 #include "Game.h"
 #include "Menu.h"
-#include "TileMap.h"
+#include "World.h"
 
 int Game::instance = 0;
 
@@ -13,7 +13,7 @@ Game::Game()
 		window->setFramerateLimit(60);
 		window->setVerticalSyncEnabled(true);
 		menu = new Menu();
-
+		world = new World();
 }
 
 Game* Game::getInstance()
@@ -36,14 +36,11 @@ Menu* Game::getMenu()
 
 void Game::draw()
 {
-	TileMap map;
 	window->clear();
 	if (isInMenu)
 		menu->Draw();
 	else {
-		CircleShape shape(50);
-		shape.setFillColor(sf::Color(100, 250, 50));
-		window->draw(map);
+		world->draw();
 	}
 	window->display();
 }
