@@ -15,6 +15,6 @@ private:
 	bool keyRight;
 	bool keyShift;
 	bool keyEnter;
-	int speedLevel = 2;
-	int speedLevelShift = 3;
+	int speedLevel = 3;
+	int speedLevelShift = 2;
 };

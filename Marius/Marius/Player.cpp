@@ -4,10 +4,17 @@
 #include <cstdlib>
 #include <iostream>
 
+const sf::IntRect pos1(0, 0, 32, 64);
+const sf::IntRect pos2(32, 0, 32, 64);
+const sf::IntRect pos3(64, 0, 32, 64);
+const sf::IntRect pos4(96, 0, 32, 64);
+const sf::IntRect pos5(128, 0, 32, 64);
+const sf::IntRect pos6(160, 0, 32, 64);
+
 Player::Player() {
 
 	txPlayer = Texture();
-	txPlayer.loadFromFile("res/sprites/hero/down.png");
+	txPlayer.loadFromFile("res/sprites/hero/walk.png");
 	// Create a sprite
 	playerSprite = Sprite();
 	playerSprite.setTexture(txPlayer);
@@ -15,18 +22,9 @@ Player::Player() {
 	posX = 250; // Perfect pos JG : 250
 	posY = 641; // Perfect pos JG : 517
 	playerSprite.setPosition(this->posX, this->posY);
-}
-
-void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
-{
-	// on applique la transformation
-	states.transform *= getTransform();
-
-	// on applique la texture du tileset
-	states.texture = &m_tileset;
-
-	// et on dessine enfin le tableau de vertex
-	target.draw(m_vertices, states);
+	playerSprite.setOrigin(16, 32);
+	playerSprite.setTextureRect(pos3);
+	animationLoop = 0;
 }
 
 
@@ -40,8 +38,13 @@ void Player::attack() {
 }
 
 void Player::move(Vector2f vector) {
+	if (vector.x != 0) {
+		animationLoop++;
+		setAnimation(vector.x);
+	} else 
+		playerSprite.setTextureRect(pos3);
 	this->posX += vector.x;
-	this->posY += vector.y;
+	//this->posY += vector.y;
 	playerSprite.setPosition(getCoord());
 }
 
@@ -50,6 +53,28 @@ Vector2f Player::getCoord() {
 	vector.x = this->posX;
 	vector.y = this->posY;
 	return vector;
+}
+
+void Player::setAnimation(int x) {
+	if (x > 0)
+		playerSprite.setScale(1.f, 1.f);
+	else
+		playerSprite.setScale(-1.f, 1.f);
+
+	if (animationLoop > 30)
+		animationLoop = 0;
+	else if (animationLoop > 25)
+		playerSprite.setTextureRect(pos6);
+	else if (animationLoop > 20)
+		playerSprite.setTextureRect(pos5);
+	else if (animationLoop > 15)
+		playerSprite.setTextureRect(pos4);
+	else if (animationLoop > 10)
+		playerSprite.setTextureRect(pos3);
+	else if (animationLoop > 5)
+		playerSprite.setTextureRect(pos2);
+	else if (animationLoop > 0)
+		playerSprite.setTextureRect(pos1);
 }
 
 void Player::Update()

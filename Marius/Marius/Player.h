@@ -5,7 +5,7 @@
 #define PLAYER_H
 using namespace sf;
 
-class Player : public AbstractEntity, public sf::Drawable, public sf::Transformable {
+class Player : public AbstractEntity {
 	sf::VertexArray m_vertices;
 	sf::Texture m_tileset;
 public:
@@ -20,11 +20,12 @@ private:
 	float posX;
 	float posY;
 	int numLive;
+	int animationLoop;
 	bool stateJump;
 	bool isAlive;
 	Sprite playerSprite;
 	Texture txPlayer;
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	void setAnimation(int x);
 };
 
 
