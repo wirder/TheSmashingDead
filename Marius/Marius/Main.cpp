@@ -25,10 +25,6 @@ int main()
 	{
 		eManager.manageEvent();
 		game->draw();
-
-		/*window.clear();
-		window.draw(shape);
-		window.display();*/
 	}
 
 	return 0;
