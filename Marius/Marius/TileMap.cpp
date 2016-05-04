@@ -1,4 +1,6 @@
 #include "TileMap.h"
+#include "Game.h"
+
 	TileMap::TileMap() {
 		const int level[] =
 		{
@@ -81,3 +83,10 @@
 		// et on dessine enfin le tableau de vertex
 		target.draw(m_vertices, states);
 	}
+
+	/*void TileMap::Draw() {
+		Game* game = Game::getInstance();
+
+		states.transform *= getTransform();
+		states.texture = &m_tileset;
+	}*/

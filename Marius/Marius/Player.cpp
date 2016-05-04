@@ -1,7 +1,9 @@
 #include "Player.h"
 #include "Debug.h"
+#include "Game.h"
 #include <cstdlib>
 #include <iostream>
+
 Player::Player() {
 	/*
 	const int level[] =
@@ -13,12 +15,13 @@ Player::Player() {
 	sf::Texture texture;
 	texture.loadFromFile("res/sprites/hero/down.png");
 	// Create a sprite
-	this->playerSprite.setTexture(texture);
-	this->playerSprite.setTextureRect(sf::IntRect(100, 100, 64, 32));
+	playerSprite = new Sprite();
+	playerSprite->setTexture(texture);
+	playerSprite->setTextureRect(sf::IntRect(100, 100, 64, 32));
 	//this->playerSprite.setColor(sf::Color(255, 255, 255, 200));
-	this->posX = 100;
-	this->posY = 100;
-	this->playerSprite.setPosition(this->posX, this->posY);
+	posX = 100;
+	posY = 100;
+	playerSprite->setPosition(this->posX, this->posY);
 }
 
 
@@ -88,6 +91,7 @@ void Player::attack() {
 void Player::move(Vector2f vector) {
 	this->posX += vector.x;
 	this->posY += vector.y;
+	playerSprite->setPosition(getCoord());
 }
 
 Vector2f Player::getCoord() {
@@ -103,4 +107,6 @@ void Player::Update()
 
 void Player::Draw()
 {
+	Game* game = Game::getInstance();
+	game->getWindow()->draw(*playerSprite);
 }

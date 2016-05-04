@@ -16,7 +16,7 @@ public:
 	void Update();
 	void Draw();
 	bool load(const std::string& tileset, sf::Vector2u tileSize, const int* tiles, unsigned int width, unsigned int height);
-	Sprite getPlayer();
+	Sprite *getPlayerSprite();
 	Player();
 private:
 	float posX;
@@ -24,8 +24,7 @@ private:
 	int numLive;
 	bool stateJump;
 	bool isAlive;
-	static Player* player;
-	Sprite playerSprite;
+	Sprite *playerSprite;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
 

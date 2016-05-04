@@ -9,6 +9,7 @@ using namespace std;
 class World {
 private:
 	Player* player;
+	TileMap* map;
 public:
 	Player* getPlayer();
 	void moveSelection(Vector2f vector);
