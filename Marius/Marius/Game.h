@@ -18,6 +18,7 @@ public:
 	static Game* getInstance();
 	RenderWindow* getWindow();
 	Menu* getMenu();
+	World* getWorld();
 	void draw();
 	bool isMenu();
 	void leaveMenu();

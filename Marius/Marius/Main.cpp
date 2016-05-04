@@ -14,6 +14,7 @@ int main()
 	shape.setFillColor(sf::Color::Green);
 
 
+
 	while (game->getWindow()->isOpen())
 	{
 		eManager.manageEvent();

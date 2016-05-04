@@ -8,7 +8,10 @@ using namespace std;
 #define WORLD_H
 class World {
 private:
+	Player* player;
 public:
+	Player* getPlayer();
+	void moveSelection(Vector2f vector);
 	World();
 	void draw();
 };

@@ -71,6 +71,8 @@ void EventManager::keyboardEvent()
 			game->getMenu()->moveSelection(getVector());
 		else 
 			game->getMenu()->validateSelection();
+	} else {
+		game->getWorld()->moveSelection(getVector());
 	}
 }
 
