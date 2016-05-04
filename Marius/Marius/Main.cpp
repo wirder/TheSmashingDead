@@ -15,8 +15,11 @@ int main()
 	shape.setFillColor(sf::Color::Green);
 
 	sf::Music music;
-	if (music.openFromFile("res/music.wav"))
+	if (music.openFromFile("res/music.wav")) {
+		music.setLoop(true);
 		music.play();
+	}
+		
 
 	while (game->getWindow()->isOpen())
 	{

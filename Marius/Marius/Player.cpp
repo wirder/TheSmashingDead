@@ -20,7 +20,7 @@ Player::Player() {
 	playerSprite->setTextureRect(sf::IntRect(100, 100, 64, 32));
 	//this->playerSprite.setColor(sf::Color(255, 255, 255, 200));
 	posX = 250; // Perfect pos JG : 250
-	posY = 517; // Perfect pos JG : 517
+	posY = 670; // Perfect pos JG : 517
 	playerSprite->setPosition(this->posX, this->posY);
 }
 

@@ -17,7 +17,9 @@ void World::draw()
 void World::moveSelection(Vector2f vector) {
 	Game *game = Game::getInstance();
 	player->move(vector);
-	game->getView()->setCenter(player->getCoord());
+	Vector2f vectorView = player->getCoord();
+	vectorView.y -= 150;
+	game->getView()->setCenter(vectorView);
 	game->getWindow()->setView(*game->getView());
 }
 
