@@ -1,4 +1,10 @@
-﻿  Menu.cpp
-d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\debug.h(34): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-d:\projets\etna\thesmashingdead\thesmashingdead\marius\marius\debug.h(36): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  Marius.vcxproj -> D:\Projets\Etna\TheSmashingDead\TheSmashingDead\Marius\x64\Debug\Marius.exe
+﻿  TileMap.cpp
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(60): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(61): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(62): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(63): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(66): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(67): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(68): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\acc10\documents\github\thesmashingdead\marius\marius\tilemap.cpp(69): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+  Marius.vcxproj -> C:\Users\ACC10\Documents\GitHub\TheSmashingDead\Marius\x64\Debug\Marius.exe
