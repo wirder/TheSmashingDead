@@ -15,17 +15,16 @@ int main()
 	shape.setFillColor(sf::Color::Green);
 
 	sf::Music music;
-	if (music.openFromFile("res/music.wav"))
+	if (music.openFromFile("res/music.wav")) {
+		music.setLoop(true);
 		music.play();
+	}
+		
 
 	while (game->getWindow()->isOpen())
 	{
 		eManager.manageEvent();
 		game->draw();
-
-		/*window.clear();
-		window.draw(shape);
-		window.display();*/
 	}
 
 	return 0;
