@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "EventManager.h"
 #include "Game.h"
 
@@ -13,7 +14,9 @@ int main()
 	shape = sf::CircleShape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
-
+	sf::Music music;
+	if (music.openFromFile("res/music.wav"))
+		music.play();
 
 	while (game->getWindow()->isOpen())
 	{
