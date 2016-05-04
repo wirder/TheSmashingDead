@@ -3,6 +3,7 @@
 #include "Game.h"
 #include <cstdlib>
 #include <iostream>
+#include <math.h>
 
 const sf::IntRect pos1(0, 0, 32, 64);
 const sf::IntRect pos2(32, 0, 32, 64);
@@ -10,6 +11,7 @@ const sf::IntRect pos3(64, 0, 32, 64);
 const sf::IntRect pos4(96, 0, 32, 64);
 const sf::IntRect pos5(128, 0, 32, 64);
 const sf::IntRect pos6(160, 0, 32, 64);
+const sf::IntRect jumptx(192, 0, 32, 64);
 
 Player::Player() {
 
@@ -25,12 +27,31 @@ Player::Player() {
 	playerSprite.setOrigin(16, 32);
 	playerSprite.setTextureRect(pos3);
 	animationLoop = 0;
+	jumpLoop = 0;
+	delayJump = 0;
+	stateJump = false;
 }
 
 
-void Player::jump(float posY) {
-	this->stateJump = true;
-	this->posY = posY++;
+void Player::jump(bool fromEvent) {
+	if (stateJump && fromEvent)
+		return;
+	if (jumpLoop < 0 && delayJump < 15)
+		return;
+	else if (delayJump >= 15) {
+		delayJump = 0;
+	}
+
+	stateJump = true;
+	if (jumpLoop > 4.60) {
+		stateJump = false;
+		jumpLoop = -0.1;
+		delayJump++;
+		posY -= 2.5;
+	} else {
+		(jumpLoop > 3.14) ? jumpLoop += 0.1 : jumpLoop += 0.2;
+		posY -= sin(jumpLoop) * 8;
+	}
 }
 
 void Player::attack() {
@@ -75,6 +96,8 @@ void Player::setAnimation(int x) {
 		playerSprite.setTextureRect(pos2);
 	else if (animationLoop > 0)
 		playerSprite.setTextureRect(pos1);
+	else if (stateJump)
+		playerSprite.setTextureRect(jumptx);
 }
 
 void Player::Update()
@@ -82,7 +105,13 @@ void Player::Update()
 }
 
 void Player::Draw()
-{
+{ 
+	delayJump++;
+	if (stateJump) {
+		playerSprite.setTextureRect(jumptx);
+		jump(false);
+	}
+		
 	Game* game = Game::getInstance();
 	game->getWindow()->draw(playerSprite);
 }

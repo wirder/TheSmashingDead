@@ -13,6 +13,7 @@ keyLeft = false;
 keyRight = false;
 keyShift = false;
 keyEnter = false;
+keySpace = false;
 }
 
 void EventManager::manageEvent()
@@ -36,7 +37,6 @@ void EventManager::manageEvent()
 
 void EventManager::keyboardEvent()
 {
-	Game *game = Game::getInstance();
 	if (event.type == Event::KeyPressed) {
 		if ((event.key.code == Keyboard::Z) || (event.key.code == Keyboard::Up))
 			keyUp = true;
@@ -50,6 +50,8 @@ void EventManager::keyboardEvent()
 			keyShift = true;
 		if (event.key.code == Keyboard::Return)
 			keyEnter = true;
+		if (event.key.code == Keyboard::Space)
+			keySpace = true;
 	}
 	else {
 		if ((event.key.code == Keyboard::Z) || (event.key.code == Keyboard::Up))
@@ -64,15 +66,8 @@ void EventManager::keyboardEvent()
 			keyShift = false;
 		if (event.key.code == Keyboard::Return)
 			keyEnter = false;
-	}
-
-	if (game->isMenu()){
-		if(keyEnter == false)
-			game->getMenu()->moveSelection(getVector());
-		else 
-			game->getMenu()->validateSelection();
-	} else {
-		game->getWorld()->moveSelection(getVector());
+		if (event.key.code == Keyboard::Space)
+			keySpace = false;
 	}
 }
 
@@ -90,7 +85,20 @@ Vector2f EventManager::getVector() {
 		vector.x += speedLevel;
 	if (keyShift) {
 		vector.x *= speedLevelShift;
-		vector.y *= speedLevelShift;
+		//vector.y *= speedLevelShift;
 	}
 	return vector;
+}
+
+void EventManager::update() {
+	Game *game = Game::getInstance();
+	if (game->isMenu()) {
+		if (keyEnter == false)
+			game->getMenu()->moveSelection(getVector());
+		else
+			game->getMenu()->validateSelection();
+	}
+	else {
+		game->getWorld()->moveSelection(getVector(), keySpace);
+	}
 }

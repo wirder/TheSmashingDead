@@ -12,6 +12,7 @@ Game::Game()
 		window = new RenderWindow(sf::VideoMode(1280, 720), "The Smashing Dead");
 		window->setFramerateLimit(60);
 		window->setVerticalSyncEnabled(true);
+		window->setKeyRepeatEnabled(false);
 		menu = new Menu();
 		world = new World();
 		view = new View();

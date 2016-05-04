@@ -24,6 +24,7 @@ int main()
 	while (game->getWindow()->isOpen())
 	{
 		eManager.manageEvent();
+		eManager.update();
 		game->draw();
 	}
 

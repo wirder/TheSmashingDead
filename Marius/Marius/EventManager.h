@@ -7,6 +7,7 @@ public:
 	void manageEvent();
 	sf::Event event;
 	sf::Vector2f getVector();
+	void update();
 private:
 	void keyboardEvent();
 	bool keyUp;
@@ -15,6 +16,7 @@ private:
 	bool keyRight;
 	bool keyShift;
 	bool keyEnter;
+	bool keySpace;
 	int speedLevel = 3;
 	int speedLevelShift = 2;
 };

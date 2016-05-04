@@ -12,7 +12,7 @@ private:
 	TileMap* map;
 public:
 	Player* getPlayer();
-	void moveSelection(Vector2f vector);
+	void moveSelection(Vector2f vector, bool jump);
 	World();
 	void draw();
 };

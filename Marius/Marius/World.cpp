@@ -14,7 +14,9 @@ void World::draw()
 	game->getWindow()->draw(*map);
 	player->Draw();
 }
-void World::moveSelection(Vector2f vector) {
+void World::moveSelection(Vector2f vector, bool jump) {
+	if (jump)
+		player->jump(true);
 	Game *game = Game::getInstance();
 	player->move(vector);
 	Vector2f vectorView = player->getCoord();
