@@ -16,16 +16,12 @@ Player::Player() {
 	this->playerSprite.setTexture(texture);
 	this->playerSprite.setTextureRect(sf::IntRect(100, 100, 64, 32));
 	//this->playerSprite.setColor(sf::Color(255, 255, 255, 200));
-	this->setPosX(100);
-	this->setPosY(100);
-	this->playerSprite.setPosition(this->getPosX(), this->getPosY());
+	this->posX = 100;
+	this->posY = 100;
+	this->playerSprite.setPosition(this->posX, this->posY);
 }
 
 
-void Player::moveSelection(Vector2f vector) {
-	this->posX = vector.x;
-	this->posY = vector.y;
-}
 bool Player::load(const std::string& tileset, sf::Vector2u tileSize, const int* tiles, unsigned int width, unsigned int height)
 {
 	// on charge la texture du tileset
@@ -79,13 +75,6 @@ void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	target.draw(m_vertices, states);
 }
 
-void Player::goLeft(float posX) {
-	this->posX = posX--;
-}
-
-void Player::goRight(float posX) {
-	this->posX = posX++;
-}
 
 void Player::jump(float posY) {
 	this->stateJump = true;
@@ -96,34 +85,18 @@ void Player::attack() {
 
 }
 
-void Player::setPosX(float posX) {
-	this->posX = posX;
+void Player::move(Vector2f vector) {
+	this->posX += vector.x;
+	this->posY += vector.y;
 }
 
-float Player::getPosX() {
-	return this->posX;
+Vector2f Player::getCoord() {
+	Vector2f vector = Vector2f();
+	vector.x = this->posX;
+	vector.y = this->posY;
+	return vector;
 }
 
-void Player::setPosY(float posY) {
-	this->posY = posY;
-}
-
-float Player::getPosY() {
-	return this->posY;
-}
-
-void Player::setNumLive(int numLive) {
-	this->numLive = numLive;
-
-	if (this->numLive > 0)
-		this->isAlive = true;
-	else
-		this->isAlive = false;
-}
-
-int Player::getNumLive() {
-	return this->numLive;
-}
 void Player::Update()
 {
 }

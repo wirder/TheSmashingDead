@@ -30,6 +30,7 @@
     <ClCompile Include="RessourceManager.cpp" />
     <ClCompile Include="TileMap.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractEntity.h" />
@@ -45,6 +46,7 @@
     <ClInclude Include="RessourceManager.h" />
     <ClInclude Include="TileMap.h" />
     <ClInclude Include="Window.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Marius.rc" />

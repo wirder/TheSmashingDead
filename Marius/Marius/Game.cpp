@@ -8,12 +8,13 @@ int Game::instance = 0;
 Game::Game()
 {
 		Game::instance = Game::instance + 1;
-		isInMenu = false;
-		window = new RenderWindow(sf::VideoMode(1280, 768), "The Smashing Dead");
+		isInMenu = true;
+		window = new RenderWindow(sf::VideoMode(1280, 720), "The Smashing Dead");
 		window->setFramerateLimit(60);
 		window->setVerticalSyncEnabled(true);
 		menu = new Menu();
 		world = new World();
+		view = new View();
 }
 
 Game* Game::getInstance()
@@ -33,9 +34,15 @@ Menu* Game::getMenu()
 {
 	return menu;
 }
+
 World* Game::getWorld()
 {
 	return world;
+}
+
+View* Game::getView()
+{
+	return view;
 }
 
 void Game::draw()
@@ -56,4 +63,6 @@ bool Game::isMenu()
 
 void Game::leaveMenu() {
 	isInMenu = false;
+	view->zoom(0.5f);
+	window->setView(*view);
 }

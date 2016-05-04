@@ -11,6 +11,7 @@ private:
 	Game();
 	static Game* game;
 	RenderWindow* window;
+	View* view;
 	bool isInMenu;
 	Menu* menu;
 	World* world;
@@ -19,6 +20,7 @@ public:
 	RenderWindow* getWindow();
 	Menu* getMenu();
 	World* getWorld();
+	View* getView();
 	void draw();
 	bool isMenu();
 	void leaveMenu();
