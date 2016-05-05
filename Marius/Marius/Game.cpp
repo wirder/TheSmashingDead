@@ -3,6 +3,7 @@
 #include "Menu.h"
 #include "World.h"
 #include "EventManager.h"
+#include "Debug.h"
 
 int Game::instance = 0;
 
@@ -17,6 +18,13 @@ Game::Game()
 		menu = new Menu();
 		world = new World();
 		view = new View();
+		fpsCounter = Text();
+		fpsCounter.setPosition(5, 5);
+		fpsCounter.setColor(Color(206, 65, 65));
+		fpsCounter.setCharacterSize(10);
+		font = Font();
+		if (font.loadFromFile("res/Dead Kansas.ttf"))
+			fpsCounter.setFont(font);
 }
 
 Game* Game::getInstance()
@@ -49,17 +57,22 @@ View* Game::getView()
 
 void Game::Draw()
 {
+	displayFPS();
 	window->clear();
 	if (isInMenu)
 		menu->Draw();
-	else {
+	else
 		world->draw();
-	}
+
+	window->setView(window->getDefaultView());
+	window->draw(fpsCounter);
 	window->display();
 }
 
-void Game::Update() {
+void Game::Update() 
+{
 	EventManager *eManager = EventManager::getInstance();
+
 	if (game->isMenu()) {
 		if (eManager->isKeyEnterPressed())
 			game->getMenu()->validateSelection();
@@ -79,4 +92,12 @@ void Game::leaveMenu() {
 	isInMenu = false;
 	view->zoom(0.5f);
 	window->setView(*view);
+}
+
+void Game::displayFPS() {
+	sf::Time frameTime = clock.restart();
+	float fps = 1 / (frameTime.asMilliseconds() * 0.001);
+	std::ostringstream ss;
+	ss << (int)fps;
+	fpsCounter.setString(ss.str());
 }

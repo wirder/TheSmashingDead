@@ -15,6 +15,9 @@ private:
 	bool isInMenu;
 	Menu* menu;
 	World* world;
+	void displayFPS();
+	Text fpsCounter;
+	Font font;
 public:
 	static Game* getInstance();
 	RenderWindow* getWindow();
@@ -25,5 +28,6 @@ public:
 	void Update();
 	bool isMenu();
 	void leaveMenu();
+	Clock clock;
 	static int instance;
 };
