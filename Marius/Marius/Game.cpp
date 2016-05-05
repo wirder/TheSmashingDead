@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "Menu.h"
 #include "World.h"
+#include "EventManager.h"
 
 int Game::instance = 0;
 
@@ -46,7 +47,7 @@ View* Game::getView()
 	return view;
 }
 
-void Game::draw()
+void Game::Draw()
 {
 	window->clear();
 	if (isInMenu)
@@ -55,6 +56,18 @@ void Game::draw()
 		world->draw();
 	}
 	window->display();
+}
+
+void Game::Update() {
+	EventManager *eManager = EventManager::getInstance();
+	if (game->isMenu()) {
+		if (eManager->isKeyEnterPressed())
+			game->getMenu()->validateSelection();
+		else
+			game->getMenu()->moveSelection(eManager->getVectorDirection());
+	}
+	else
+		game->getWorld()->moveSelection(eManager->getVectorDirection(), eManager->isKeySpacePressed());
 }
 
 bool Game::isMenu()

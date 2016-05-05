@@ -1,22 +1,25 @@
-#pragma once
 #include <SFML/Graphics.hpp>
 #include "Game.h"
+#include <vector>
+
+using namespace std;
+
 class EventManager {
 public:
-	EventManager();
 	void manageEvent();
-	sf::Event event;
-	sf::Vector2f getVector();
-	void update();
+	Vector2f getVectorDirection();
+	bool isKeyEnterPressed();
+	bool isKeySpacePressed();
+	static EventManager* getInstance();
+	static int instance;
 private:
+	static EventManager* eManager;
+	EventManager();
 	void keyboardEvent();
-	bool keyUp;
-	bool keyDown;
-	bool keyLeft;
-	bool keyRight;
-	bool keyShift;
-	bool keyEnter;
-	bool keySpace;
+	void setVectorDirection();
+	Vector2f vectorDirection;
+	sf::Event event;
 	int speedLevel = 3;
 	int speedLevelShift = 2;
+	vector<bool> keyPressed;
 };

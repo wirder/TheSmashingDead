@@ -6,7 +6,7 @@
 using namespace sf;
 using namespace std;
 
-class Game {
+class Game : AbstractEntity{
 private:
 	Game();
 	static Game* game;
@@ -21,7 +21,8 @@ public:
 	Menu* getMenu();
 	World* getWorld();
 	View* getView();
-	void draw();
+	void Draw();
+	void Update();
 	bool isMenu();
 	void leaveMenu();
 	static int instance;
