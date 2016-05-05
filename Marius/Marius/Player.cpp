@@ -76,6 +76,9 @@ Vector2f Player::getCoord() {
 	return vector;
 }
 
+void Player::setPosX(int x) {
+	this->posX = x;
+}
 void Player::setAnimation(int x) {
 	if (x > 0)
 		playerSprite.setScale(1.f, 1.f);

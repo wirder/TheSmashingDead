@@ -16,6 +16,7 @@ public:
 	void Update();
 	void Draw();
 	Player();
+	void setPosX(int x);
 private:
 	float posX;
 	float posY;
