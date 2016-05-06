@@ -1,8 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include "TileMap.h"
 #include "Player.h"
+#include "Enemy.h"
 #include "Game.h"
 #include "colisionManager.h"
+
 using namespace sf;
 using namespace std;
 #ifndef WORLD_H
@@ -10,6 +12,7 @@ using namespace std;
 class World {
 private:
 	Player* player;
+	Enemy* enemy;
 	TileMap* map;
 	colisionManager* cm;
 public:

@@ -5,7 +5,7 @@ colisionManager::colisionManager()
 	map = new TileMap();
 
 }
-int colisionManager::Update(Player *player)
+int colisionManager::Update(Player *player, Enemy *enemy)
 {
 
 	DebugOut("JE suis dans colisionmanager");
@@ -39,6 +39,10 @@ int colisionManager::Update(Player *player)
 	};
 	int i = (unsigned int)std::round((std::abs(player->getCoord().x) / 32));
 	int j = (unsigned int)std::round((std::abs(player->getCoord().y) / 32));
+
+	int ie = (unsigned int)std::round((std::abs(enemy->getCoord().x) / 32));
+	int je = (unsigned int)std::round((std::abs(enemy->getCoord().y) / 32));
+
 	int width = 80;
 	int height = 24;
 
@@ -54,7 +58,11 @@ int colisionManager::Update(Player *player)
 	}
 	else if (HityAxis != 0) {
 		return 2;
-	} else		{
+	}
+	else if (ie == i && je == j) {
+		return 3;
+	}
+	else		{
 		return 0;
 	}
 	

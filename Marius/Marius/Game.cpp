@@ -87,7 +87,10 @@ bool Game::isMenu()
 {
 	return isInMenu;
 }
-
+void Game::setIsMenu(bool menu)
+{
+	isInMenu = menu;
+}
 void Game::leaveMenu() {
 	isInMenu = false;
 	view->zoom(0.5f);

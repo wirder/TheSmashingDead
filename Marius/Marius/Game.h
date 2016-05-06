@@ -27,6 +27,7 @@ public:
 	void Draw();
 	void Update();
 	bool isMenu();
+	void setIsMenu(bool menu);
 	void leaveMenu();
 	Clock clock;
 	static int instance;
