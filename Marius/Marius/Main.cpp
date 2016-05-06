@@ -14,7 +14,7 @@ int main()
 	sf::Music music;
 	if (music.openFromFile("res/music.wav")) {
 		music.setLoop(true);
-		//music.play();
+		music.play();
 	}
 		
 

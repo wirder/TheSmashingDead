@@ -5,13 +5,13 @@
 #include <iostream>
 #include <math.h>
 
-const sf::IntRect pos1(0, 0, 32, 32);
-const sf::IntRect pos2(32, 0, 32, 32);
-const sf::IntRect pos3(64, 0, 32, 32);
-const sf::IntRect pos4(96, 0, 32, 32);
-const sf::IntRect pos5(128, 0, 32, 32);
-const sf::IntRect pos6(160, 0, 32, 32);
-const sf::IntRect jumptx(192, 0, 32, 32);
+const sf::IntRect pos1(0, 0, 32, 64);
+const sf::IntRect pos2(32, 0, 32, 64);
+const sf::IntRect pos3(64, 0, 32, 64);
+const sf::IntRect pos4(96, 0, 32, 64);
+const sf::IntRect pos5(128, 0, 32, 64);
+const sf::IntRect pos6(160, 0, 32, 64);
+const sf::IntRect jumptx(192, 0, 32, 64);
 
 Enemy::Enemy() {
 
@@ -113,11 +113,7 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
-	delayJump++;
-	if (stateJump) {
-		playerSprite.setTextureRect(jumptx);
-		jump(false);
-	}
+	playerSprite.setTextureRect(pos1);
 
 	Game* game = Game::getInstance();
 	game->getWindow()->draw(playerSprite);

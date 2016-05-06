@@ -30,7 +30,7 @@ void World::moveSelection(Vector2f vector, bool jump) {
 	} else if (up == 3) {
 		player->setPosX(player->getCoord().x - 10);
 		DebugOut("Enemy detect");
-		game->getWindow()->close();
+		game->setIsMenu(true);
 	}
 	player->move(vector);
 	

@@ -89,12 +89,17 @@ bool Game::isMenu()
 }
 void Game::setIsMenu(bool menu)
 {
+	if (menu)
+		instance++;
 	isInMenu = menu;
 }
 void Game::leaveMenu() {
 	isInMenu = false;
-	view->zoom(0.5f);
+	if (instance < 2) {
+		view->zoom(0.5f);
+	}
 	window->setView(*view);
+	
 }
 
 void Game::displayFPS() {
